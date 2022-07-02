@@ -45,7 +45,7 @@ const Navbar = () => {
 const Section = styled.section`
   nav {
     height: 5rem;
-    box-shadow: var(--shadow-3);
+    box-shadow: var(--shadow-4);
   }
   .nav-center {
     width: 80vw;
@@ -57,9 +57,10 @@ const Section = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 0.5rem;
   }
   img {
-    width: 13rem;
+    width: 10rem;
     margin-left: -15px;
   }
   .nav-btn {
@@ -75,6 +76,12 @@ const Section = styled.section`
   }
 
   @media screen and (min-width: 800px) {
+    nav {
+      box-shadow: var(--shadow-3);
+    }
+    img {
+      width: 12rem;
+    }
     .nav-btn {
       display: none;
     }

@@ -29,14 +29,15 @@ const Wrapper = styled.div`
     border: 1px solid var(--clr-primary-2);
   }
   .question p {
-    padding-left: 2.4rem;
+    padding-left: 0.4rem;
+    margin-bottom: 0.35rem;
     font-size: 0.75rem;
     max-width: 50em;
     transition: var(--transition-1);
   }
   .question-content {
     display: flex;
-    gap: 0 1rem;
+    gap: 0 0.45rem;
   }
   & button {
     color: var(--clr-primary-2);
@@ -49,17 +50,28 @@ const Wrapper = styled.div`
   }
   .question-content h4 {
     font-size: 0.7rem;
-    margin-bottom: 1rem;
-    padding: 1.3rem 0 1rem 0;
+    margin-bottom: 0.01rem;
+    padding: 1.3rem 0 1.5rem 0;
   }
   @media screen and (min-width: 760px) {
     .question-content h4 {
       font-size: 1rem;
-      padding: 1.5rem 0 1.2rem 0;
+      padding: 1.5rem 0 1.5rem 0;
     }
     button {
       color: var(--clr-primary-2);
       font-size: 1.5rem;
+    }
+    .question-content {
+      display: flex;
+      gap: 0 1rem;
+    }
+    .question p {
+      padding-left: 2.5rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.75rem;
+      max-width: 50em;
+      transition: var(--transition-1);
     }
   }
 `;

@@ -31,19 +31,18 @@ const Contact = () => {
 };
 
 const Wrapper = styled.div`
-  margin-top: 45rem;
   .contact {
     position: relative;
+    width: 100%;
   }
   .content {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    padding: 2rem;
+    padding: 0.5rem;
   }
   .contact-img {
     height: 40vh;
-    /* border-radius: var(--borderRadius); */
     filter: brightness(60%);
   }
   .info h4 {
@@ -57,7 +56,7 @@ const Wrapper = styled.div`
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     display: inline;
-    width: 60%;
+    width: 70%;
     margin: 0;
   }
   .input::placeholder {
@@ -67,9 +66,17 @@ const Wrapper = styled.div`
     display: inline-block;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    padding: 0.45rem 0.25rem;
   }
 
   @media screen and (min-width: 760px) {
+    .contact {
+      position: relative;
+      width: 95%;
+    }
+    .contact-img {
+      border-radius: var(--borderRadius);
+    }
     margin-top: 25rem;
     .info p {
       color: var(--white);
@@ -78,6 +85,9 @@ const Wrapper = styled.div`
     .input {
       width: 60%;
     }
+    .content {
+      padding: 2rem;
+    }
   }
   @media screen and (min-width: 1370px) {
     margin-top: 10rem;
@@ -85,7 +95,8 @@ const Wrapper = styled.div`
       display: grid;
       grid-template-columns: 1fr 1fr;
       justify-content: center;
-      gap: 0 11rem;
+      gap: 0 10rem;
+      padding: 3rem;
     }
     .input {
       width: 80%;

@@ -24,12 +24,8 @@ const Wrapper = styled.footer`
     height: 7rem;
     width: 100%;
     background-color: black;
-    /* position: relative; */
   }
   .footer-content {
-    /* position: absolute;
-    left: 0;
-    bottom: 0; */
     padding-top: 2rem;
     display: flex;
     flex-direction: column;
@@ -37,6 +33,12 @@ const Wrapper = styled.footer`
     align-items: center;
     text-align: center;
     color: white;
+    font-size: 0.87rem;
+  }
+  @media screen and (min-width: 760px) {
+    .footer-content {
+      font-size: 1rem;
+    }
   }
 `;
 export default Footer;

@@ -6,7 +6,7 @@ import axios from "axios";
 const RecipesContext = React.createContext();
 
 const initialState = {
-  isSidebarOpen: true,
+  isSidebarOpen: false,
   isLoading: false,
   isError: false,
   recipes: [],

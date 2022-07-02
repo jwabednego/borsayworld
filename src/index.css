@@ -69,10 +69,7 @@ body {
   font-family: var(--ff-body);
   font-weight: 400;
   line-height: 1.75;
-  /* color: var(--textColor); */
   color: black;
-  /* max-width: var(--maxWidth); */
-  /* margin: 0 auto; */
 }
 p {
   margin-bottom: 1.5rem;
@@ -105,10 +102,10 @@ h3 {
   font-size: 1.5rem;
 }
 h4 {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
 h5 {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 @media screen and (min-width: 800px) {
   h1 {

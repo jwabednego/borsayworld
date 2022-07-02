@@ -17,7 +17,7 @@ const Home = () => {
       <Contact />
       <Faq />
       <Reviews />
-      <Footer />
+      {/* <Footer /> */}
     </Wrapper>
   );
 };

@@ -47,9 +47,8 @@ const Wrapper = styled.div`
   }
   .featured-center {
     position: absolute;
-    top: 80%;
-    width: 80vw;
-    gap: 0 8rem;
+    top: 85%;
+    width: 75vw;
     left: 10%;
     transform: translateX(-50%, -50%);
   }
@@ -112,6 +111,7 @@ const Wrapper = styled.div`
         justify-content: center;
         gap: 0 4rem;
         left: 10%;
+        top: 80%;
         transform: translateX(-50%, -50%);
       }
     }

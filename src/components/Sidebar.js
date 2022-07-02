@@ -51,8 +51,10 @@ const Sidebar = () => {
 const Wrapper = styled.section`
   .sidebar {
     position: fixed;
-    top: 2%;
+    top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
     background-color: var(--white);
@@ -76,9 +78,11 @@ const Wrapper = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 1.4rem;
+    padding: 0 1.3rem;
   }
   img {
-    width: 13rem;
+    width: 10rem;
     margin-left: -15px;
   }
   .sidebar-btn {
@@ -102,6 +106,9 @@ const Wrapper = styled.section`
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
   }
+  .link {
+    color: black;
+  }
   .sidebar-icons {
     display: flex;
     justify-content: center;
@@ -114,6 +121,9 @@ const Wrapper = styled.section`
   }
 
   @media screen and (min-width: 800px) {
+    img {
+      width: 10rem;
+    }
     .sidebar {
       display: none;
     }

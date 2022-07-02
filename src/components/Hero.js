@@ -97,11 +97,13 @@ const Wrapper = styled.section`
     gap: 2rem;
     overflow: hidden;
     position: relative;
+    width: 100%;
     height: 100vh;
   }
   .hero-img {
     height: calc(100vh - 15rem);
-    width: 95vw;
+    width: 95%;
+    margin: 0 auto;
     border-radius: var(--borderRadius);
     margin-bottom: 1rem;
     filter: brightness(50%);
@@ -149,9 +151,16 @@ const Wrapper = styled.section`
   }
   .ctrl-btns {
     position: absolute;
-    top: 55%;
-    left: 40%;
-    /* transform: translate(-50%, -50%); */
+    width: 100%;
+    top: 60%;
+    left: 45%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+  @media screen and (min-width: 600px) {
+    .ctrl-btns {
+      left: 50%;
+    }
   }
   .ctrl-btn {
     color: var(--clr-primary-2);
@@ -163,6 +172,12 @@ const Wrapper = styled.section`
   }
 
   @media screen and (min-width: 700px) {
+    .hero {
+      width: 95vw;
+    }
+    .hero-img {
+      margin: 0;
+    }
     h2,
     h3,
     h4,

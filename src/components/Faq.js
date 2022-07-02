@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   .faq-info {
     display: block;
     margin: 0 auto;
-    width: 80vw;
+    width: 98%;
     max-width: 1170px;
     transition: var(--transition-1);
   }

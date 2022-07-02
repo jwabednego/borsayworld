@@ -7,12 +7,11 @@ import { GiGlassCelebration } from "react-icons/gi";
 const Services = () => {
   return (
     <Wrapper>
+      <h2 className="title">services</h2>
       <div className="service section-center section">
         <article className="services-header">
           <section>
-            <h4>
-              Global Recipes <br />
-            </h4>
+            <h4>Global Recipes</h4>
             <h4>Prepared just for you, anytime and anyhow.</h4>
           </section>
           <p>
@@ -59,53 +58,64 @@ const Services = () => {
 const Wrapper = styled.div`
   .service {
     position: relative;
+    width: 100%;
   }
   .services-header {
     display: grid;
-    place-items: center;
-    background-color: var(--clr-primary-8);
-    padding: 2rem 2rem 8rem 2rem;
+    background-color: var(--clr-primary-9);
+    padding: 2rem 2.5rem;
+    width: 100%;
   }
   .services-header h4 {
     text-transform: none;
+    padding-right: 0;
   }
   .services-header p {
     font-size: 0.85rem;
-  }
-  @media screen and (min-width: 570px) {
-    .services-header p {
-      font-size: 1rem;
-    }
+    padding-right: 0;
   }
   .services {
-    width: 70vw;
+    width: 100%;
     margin: 0 auto;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%);
   }
   .info {
     background-color: var(--white);
-    margin-bottom: 2rem;
-    padding: 1.5rem 2rem;
-    border-bottom-left-radius: 15%;
-    border-bottom-right-radius: 15%;
+    margin: 2rem;
+    padding: 1rem 1.5rem;
     text-align: center;
     box-shadow: var(--shadow-4);
-    font-size: 0.85rem;
+    font-size: 0.75rem;
   }
   & span {
     color: var(--clr-primary-2);
     font-size: 2.5rem;
     border-radius: 50%;
+    margin-top: 0;
+    padding-top: 0;
   }
   @media screen and (min-width: 760px) {
+    .service {
+      position: relative;
+      width: 95%;
+      border-radius: var(--borderRadius);
+    }
     .services {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 0 4rem;
-      top: 60%;
+      gap: 0 0.25rem;
+      position: absolute;
+      top: 130%;
+      left: 50%;
+      width: 90%;
+      transform: translate(-50%, -50%);
+    }
+    .services-header {
+      padding: 2rem 2.5rem 3.5rem;
+    }
+    .info {
+      margin: 2rem;
+      padding: 1rem 1.8rem;
+      font-size: 0.85rem;
     }
   }
 
@@ -118,7 +128,11 @@ const Wrapper = styled.div`
     .services {
       width: 70vw;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 0 4rem;
+      gap: 0 1rem;
+      top: 90%;
+    }
+    .services-header {
+      padding: 2rem 2.5rem 8rem;
     }
   }
 `;
