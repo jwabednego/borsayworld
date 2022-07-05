@@ -158,13 +158,13 @@ ul {
   border: transparent;
   border-radius: var(--borderRadius);
   letter-spacing: var(--letterSpacing-2);
-  padding: 0.375rem 0.75rem;
+  padding: 0.575rem 0.75rem;
   box-shadow: var(--shadow-4);
   transition: var(--transition-1);
   text-transform: capitalize;
 }
 .btn:hover {
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-3);
   background: var(--clr-primary-2);
   color: var(--clr-gray-4);
 }
@@ -243,14 +243,20 @@ ul {
   }
 }
 .loading {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   border: 5px solid var(--clr-primary-9);
   border-radius: 100%;
   border-top: 5px solid var(--clr-primary-3);
   border-left: 5px solid var(--clr-primary-3);
   animation: spinner 0.8s linear infinite;
   margin: 0 auto;
+}
+@media screen and (min-width: 760px) {
+  .loading {
+    width: 5rem;
+    height: 5rem;
+  }
 }
 .title {
   text-align: center;

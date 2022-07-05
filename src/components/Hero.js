@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { TbPlayerTrackPrev, TbPlayerTrackNext } from "react-icons/tb";
 import { useRecipesContext } from "../contexts/recipes_context";
 import Loading from "../components/Loading";
@@ -69,12 +70,13 @@ const Hero = () => {
               <h4>{category}</h4>
               <h4 className="type">{type}</h4>
               <h3 className="hero-price">@ {formatPrice(price)}</h3>
+
+              <Link to={`recipes/${id}`} className="btn hero-btn">
+                visit recipe
+              </Link>
             </article>
           );
         })}
-        <button type="button" className="btn hero-btn">
-          visit recipe
-        </button>
         <div className="ctrl-btns">
           <button type="button" className="ctrl-btn" onClick={prev}>
             <TbPlayerTrackPrev className="ctrl-btn" />
@@ -146,7 +148,7 @@ const Wrapper = styled.section`
     margin-top: 3rem;
   }
   .hero-btn {
-    margin-top: 14rem;
+    margin-top: 1rem;
     padding: 0.75rem 1rem;
   }
   .ctrl-btns {

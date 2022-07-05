@@ -11,6 +11,10 @@ const initialState = {
   isError: false,
   recipes: [],
   featured_recipes: [],
+  singleIsLoading: false,
+  singleIsError: false,
+  single_recipe: {},
+  grid_view: true,
 };
 
 export const RecipesProvider = ({ children }) => {
@@ -30,9 +34,19 @@ export const RecipesProvider = ({ children }) => {
     try {
       dispatch({ type: "GET_RECIPES_START" });
       const { data } = await axios.get(url);
-      dispatch({ type: "GET_RECIPES_FINISHED", payload: data });
+      dispatch({ type: "GET_RECIPES_CORRECT", payload: data });
     } catch (error) {
       dispatch({ type: "GET_RECIPES_ERROR" });
+    }
+  };
+
+  const fetchSingleRecipe = async (url) => {
+    dispatch({ type: "GET_SINGLE_RECIPE_START" });
+    try {
+      const { data } = await axios.get(url);
+      dispatch({ type: "GET_SINGLE_RECIPE_CORRECT", payload: data });
+    } catch (error) {
+      dispatch({ type: "GET_SINGLE_RECIPE_ERROR" });
     }
   };
 
@@ -42,7 +56,14 @@ export const RecipesProvider = ({ children }) => {
 
   return (
     <RecipesContext.Provider
-      value={{ ...state, openSidebar, closeSidebar, fetchRecipes, refresh }}
+      value={{
+        ...state,
+        openSidebar,
+        closeSidebar,
+        fetchRecipes,
+        refresh,
+        fetchSingleRecipe,
+      }}
     >
       {children}
     </RecipesContext.Provider>

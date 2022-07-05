@@ -17,7 +17,7 @@ const recipes_reducer = (state, action) => {
       isLoading: true,
     };
   }
-  if (action.type === "GET_RECIPES_FINISHED") {
+  if (action.type === "GET_RECIPES_CORRECT") {
     const featured = action.payload.filter(
       (recipe) => recipe.featured === "true"
     );
@@ -34,6 +34,20 @@ const recipes_reducer = (state, action) => {
       isLoading: false,
       isError: true,
     };
+  }
+
+  if (action.type === "GET_SINGLE_RECIPE_START") {
+    return { ...state, singleIsLoading: true, singleIsError: false };
+  }
+  if (action.type === "GET_SINGLE_RECIPE_CORRECT") {
+    return {
+      ...state,
+      singleIsLoading: false,
+      single_recipe: action.payload,
+    };
+  }
+  if (action.type === "GET_SINGLE_RECIPE_ERROR") {
+    return { ...state, singleIsLoading: false, singleIsError: true };
   }
   throw new Error(`No Action Type Match ${action.type}, Pls Check Good.`);
 };

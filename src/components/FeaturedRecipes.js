@@ -18,7 +18,7 @@ const FeaturedRecipes = () => {
           return (
             <article key={id}>
               <img src={url} alt={name} className="img featured-img" />
-              <Link to={"/"} className="link">
+              <Link to={`recipes/${id}`} className="link">
                 <MdAdsClick />
               </Link>
               <Stars stars={stars} reviews={reviews} />
