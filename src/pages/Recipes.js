@@ -11,7 +11,7 @@ const Recipes = () => {
         <div className="section-center page">
           <Filter />
           <div className="content">
-            <Sort />
+            {/* <Sort /> */}
             <RecipeView />
           </div>
         </div>
@@ -24,11 +24,11 @@ const Wrapper = styled.div`
   @media screen and (min-width: 992px) {
     .content {
       display: grid;
-      grid-template-columns: 1fr 4fr;
+      /* grid-template-columns: 1fr 4fr; */
       gap: 0 2rem;
     }
     .section-center {
-      width: 90vw;
+      width: 80vw;
     }
   }
 `;

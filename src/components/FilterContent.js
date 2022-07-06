@@ -34,11 +34,7 @@ const FilterContent = () => {
             dinner
           </option>
         </select>
-
-        <form>
-          <label>price</label>
-          <input type="range" />
-        </form>
+        <button className="btn">clear filter</button>
       </div>
     </Wrapper>
   );
@@ -62,7 +58,7 @@ const Wrapper = styled.div`
   .filter-center {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-
+    gap: 0 2rem;
     margin: 1rem 0 2rem;
   }
   form {

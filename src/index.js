@@ -3,17 +3,15 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
 import { RecipesProvider } from "./contexts/recipes_context";
-import { FilterProvider } from "./reducers/filters_reducer";
-import { CartProvider } from "./reducers/cart_reducers";
+import { FilterProvider } from "./contexts/filter_context";
+import { CartProvider } from "./contexts/cart_context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <RecipesProvider>
       <FilterProvider>
-        <CartProvider>
-          <App />
-        </CartProvider>
+        <App />
       </FilterProvider>
     </RecipesProvider>
   </React.StrictMode>
